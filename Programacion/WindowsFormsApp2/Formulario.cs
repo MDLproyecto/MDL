@@ -47,15 +47,15 @@ namespace WindowsFormsApp2
                     pictureBox1.Image = Properties.Resources.admin; // selecciona la foto del admin
 
                     adminContainer.Visible = true; // Activa el poder ver el menu admin
-                    btnVen.Visible = true; // Boton venta visible
-                    btnFin.Visible = true; // Boton compra de productos finales visible
+                    panelVen.Visible = true; // Boton venta visible
+                    panelFin.Visible = true; // Boton compra de productos finales visible
                     break;
 
                 case "productor":
                     pictureBox1.Image = Properties.Resources.productor; // selecciona la foto del productor
 
                     adminContainer.Visible = false; // Desactiva el poder ver el menu admin
-                    btnVen.Visible = true; // Boton venta visible
+                    panelVen.Visible = true; // Boton venta visible
                     panelFin.Visible = false; // Boton compra de productos finales invisible
                     break;
 
@@ -63,7 +63,7 @@ namespace WindowsFormsApp2
                     pictureBox1.Image = Properties.Resources.user; // selecciona la foto del cliente
 
                     adminContainer.Visible = false; // Desactiva el poder ver el menu admin
-                    btnVen.Visible = false; // Boton venta invisible
+                    panelVen.Visible = false; // Boton venta invisible
                     panelFin.Visible = true; // Boton compra de productos finales visible
                     break;
 

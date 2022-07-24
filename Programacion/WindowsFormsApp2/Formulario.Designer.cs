@@ -45,7 +45,7 @@
             this.accionesContainer = new System.Windows.Forms.Panel();
             this.panelFin = new System.Windows.Forms.Panel();
             this.btnFin = new System.Windows.Forms.Button();
-            this.panel8 = new System.Windows.Forms.Panel();
+            this.panelVen = new System.Windows.Forms.Panel();
             this.btnVen = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.btnIns = new System.Windows.Forms.Button();
@@ -72,7 +72,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMenu)).BeginInit();
             this.accionesContainer.SuspendLayout();
             this.panelFin.SuspendLayout();
-            this.panel8.SuspendLayout();
+            this.panelVen.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
             this.userPanel.SuspendLayout();
@@ -243,7 +243,7 @@
             // 
             this.accionesContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.accionesContainer.Controls.Add(this.panelFin);
-            this.accionesContainer.Controls.Add(this.panel8);
+            this.accionesContainer.Controls.Add(this.panelVen);
             this.accionesContainer.Controls.Add(this.panel6);
             this.accionesContainer.Controls.Add(this.panel7);
             this.accionesContainer.ForeColor = System.Drawing.SystemColors.ButtonFace;
@@ -281,15 +281,15 @@
             this.btnFin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnFin.UseVisualStyleBackColor = false;
             // 
-            // panel8
+            // panelVen
             // 
-            this.panel8.BackColor = System.Drawing.Color.Gray;
-            this.panel8.Controls.Add(this.btnVen);
-            this.panel8.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.panel8.Location = new System.Drawing.Point(3, 102);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(200, 53);
-            this.panel8.TabIndex = 19;
+            this.panelVen.BackColor = System.Drawing.Color.Gray;
+            this.panelVen.Controls.Add(this.btnVen);
+            this.panelVen.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.panelVen.Location = new System.Drawing.Point(3, 102);
+            this.panelVen.Name = "panelVen";
+            this.panelVen.Size = new System.Drawing.Size(200, 53);
+            this.panelVen.TabIndex = 19;
             // 
             // btnVen
             // 
@@ -501,7 +501,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMenu)).EndInit();
             this.accionesContainer.ResumeLayout(false);
             this.panelFin.ResumeLayout(false);
-            this.panel8.ResumeLayout(false);
+            this.panelVen.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.userPanel.ResumeLayout(false);
@@ -539,7 +539,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Panel panelFin;
         private System.Windows.Forms.Button btnFin;
-        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Panel panelVen;
         private System.Windows.Forms.Button btnVen;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Timer sidebarTimer;
