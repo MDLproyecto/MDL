@@ -189,6 +189,7 @@ namespace WindowsFormsApp2
 
         private void accionesTimer_Tick(object sender, EventArgs e)
         {
+            //animacion cerrar y abrir
             if (accionesColapsado)
             {
                 accionesContainer.Height += 10;
@@ -217,18 +218,21 @@ namespace WindowsFormsApp2
 
         private void Formulario_MouseDown(object sender, MouseEventArgs e)
         {
+            //Esto permite arrastrar la ventana
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
         private void pictureBox5_MouseDown(object sender, MouseEventArgs e)
         {
+            //Esto permite arrastrar la ventana
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
         private void sidebar_MouseDown(object sender, MouseEventArgs e)
         {
+            //Esto permite arrastrar la ventana
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
@@ -236,6 +240,7 @@ namespace WindowsFormsApp2
         
         private void timer1_Tick_1(object sender, EventArgs e)
         {
+            //Fecha y hora
             lblClock.Text = DateTime.Now.ToString("HH:mm:ss");
             lblDate.Text = DateTime.Now.ToString("dd/MM/yyyy");
         }

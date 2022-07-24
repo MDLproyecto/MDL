@@ -176,6 +176,7 @@ namespace WindowsFormsApp2
 
         private void Form1_MouseDown(object sender, MouseEventArgs e)
         {
+            //Esto permite arrastrar la ventana
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
