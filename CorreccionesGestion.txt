@@ -1,0 +1,21 @@
+Correccion de la primera entrega de proyecto
+
+- Faltan roles
+- No hay objetivo ni alcance
+- Justificación de ciclo de vida pobre
+- Errores en el formato del documento
+- Cronograma no conformado correctamente
+- Errores en la redacción de los entregables
+- Sin bibliografía
+- Organización elegida justificada y planteada de manera incorrecta
+- Gantt pobremente diseñado
+- Falta diagrama de recursos
+- Faltan reglas de proyecto
+
+Nota de proyecto 3
+
+Castro 8
+Silva 8
+Lopez 8
+Pose 1
+
