@@ -3,7 +3,7 @@ use Ke_Fruta
 if not exists (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA = 'dbo' AND TABLE_NAME = 'Usuarios')
 create table [dbo].[Usuarios]
 (
-	[Id_Cliente] INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+	[Id_User] INT NOT NULL PRIMARY KEY IDENTITY(1,1),
 	[CI] VARCHAR(8) NOT NULL,
 	[Nombres] VARCHAR(50) NOT NULL,
 	[Usuario] VARCHAR(50) NOT NULL,
@@ -48,13 +48,4 @@ insert into Semillas values ('Trigo','250'),
 							('Zapallo Criollo','310');
 
 
-select * from Usuarios;
-drop table Usuarios;
-
-select * from Semillas;
-drop table Semillas;
-
-
-select * from Compras;
-drop table Compras;
 

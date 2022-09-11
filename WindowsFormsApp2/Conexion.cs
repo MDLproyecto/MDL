@@ -14,6 +14,7 @@ namespace WindowsFormsApp2
         public int conSQL(string usuario, string contrasena)
         {
             return cn.conSQL(usuario, contrasena);
+
         }
 
 }

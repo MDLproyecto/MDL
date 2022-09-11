@@ -38,123 +38,10 @@ namespace WindowsFormsApp2
         SqlConnection con = new SqlConnection("Data Source=localhost\\SQLEXPRESS;Initial Catalog=Ke_Fruta; Integrated Security=True");
 
 
-        public void logear(String usuario, string contrasena)
-        {
-           try
-            {
-                con.Open();
-                SqlCommand cmd = new SqlCommand("SELECT Nombres,Tipo_usuario,CI,Email,Telefono FROM usuarios WHERE Usuario = @usuario AND Password = @pas ", con);
-
-                cmd.Parameters.AddWithValue("usuario", usuario);
-                cmd.Parameters.AddWithValue("pas", contrasena);
-
-
-
-
-                SqlDataAdapter sda = new SqlDataAdapter(cmd);
-                DataTable dt = new DataTable();
-                sda.Fill(dt);
-                SqlDataReader dr = cmd.ExecuteReader();
-
-                if (dr.Read())
-                {
-                    CM_Login.nombr = dr["Nombres"].ToString();
-                    CM_Login.email = dr["Email"].ToString();
-                    CM_Login.ci = dr["CI"].ToString();
-                    CM_Login.tele = dr["Telefono"].ToString();
-                }
-
-                if (dt.Rows.Count == 1){
-
-                   
-
-                    this.Hide();
-                    if (dt.Rows[0][1].ToString() == "Admin")
-                    {
-                        CM_Login.tipo = "admin";
-                        // esconde el formulario 1
-                        this.Hide();
-                        // crea la instancia del formulario 2
-                        Menu f2 = new Menu();
-                        // muestra el formulario 2
-                        f2.ShowDialog();
-                        f2 = null;
-                        // cuando se cierra el formulario 2 se abre el 1
-                        this.Show();
-                        CM_Login.corre = true;
-                    }
-                    else if (dt.Rows[0][1].ToString() == "Productor")
-                    {
-                        CM_Login.tipo = "productor";
-                        // esconde el formulario 1
-                        this.Hide();
-                        // crea la instancia del formulario 2
-                        Menu f2 = new Menu();
-                        // muestra el formulario 2
-                        f2.ShowDialog();
-                        f2 = null;
-                        // cuando se cierra el formulario 2 se abre el 1
-                        this.Show();
-                        CM_Login.corre = true;
-                    }
-                    
-                    else if (dt.Rows[0][1].ToString() == "Cliente")
-                    {
-                        CM_Login.tipo = "cliente";
-                        // esconde el formulario 1
-                        this.Hide();
-                        // crea la instancia del formulario 2
-                        Menu f2 = new Menu();
-                        // muestra el formulario 2
-                        f2.ShowDialog();
-                        f2 = null;
-                        // cuando se cierra el formulario 2 se abre el 1
-                        this.Show();
-                        CM_Login.corre = true;
-                    }
-
-                } else {
-                    if (txtU.Text == "USUARIO" && txtC.Text == "CONTRASEÑA" || txtU.Text == "" && txtC.Text == "")
-                    {
-                        MessageBox.Show("Tienes que ingresar algun dato!");
-                        CM_Login.corre = true;
-                    }
-                    else
-                        CM_Login.corre = false;
-                    {
-                        if (CM_Login.corre == false)
-                        {
-
-
-                            CM_Login.inte--;
-                        MessageBox.Show("Usuario y/o clave incorrectos.");
-                        VaciarTxt();
-                        if (CM_Login.inte == 0)
-                        {
-                            MessageBox.Show("Ha llegado al número máximo de intentos.");
-                            Application.Exit();
-                        }
-                        }
-
-                    }
-                }
-
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show(e.Message);
-            }
-            finally
-            {
-                con.Close();
-            }
-        }
+        
 
         public void log(String usuario, string contrasena)
         {
-            try
-            {    
-
                 if (cn.conSQL(txtU.Text, txtC.Text) == 1)
                 {
 
@@ -163,9 +50,13 @@ namespace WindowsFormsApp2
 
                     cmd.Parameters.AddWithValue("usuario", usuario);
                     cmd.Parameters.AddWithValue("pas", contrasena);
-                    DataTable dt = new DataTable();
+                
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                SqlDataReader dr = cmd.ExecuteReader();
 
-                    this.Hide();
+                this.Hide();
                     if (dt.Rows[0][1].ToString() == "Admin")
                     {
                         CM_Login.tipo = "admin";
@@ -235,16 +126,7 @@ namespace WindowsFormsApp2
                             }
                         }
 
-                    }
-                }
-
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show(e.Message);
-            }
-            finally
-            {
+                    } 
                 con.Close();
             }
         }
@@ -275,7 +157,7 @@ namespace WindowsFormsApp2
             CM_Login.user = txtU.Text;
             CM_Login.contra = txtC.Text;
 
-            logear(this.txtU.Text, this.txtC.Text);
+            log(this.txtU.Text, this.txtC.Text);
              
             
         }
