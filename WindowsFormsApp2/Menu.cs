@@ -300,7 +300,7 @@ namespace WindowsFormsApp2
 
         private void btnIns_Click(object sender, EventArgs e)
         {
-            Compras form = new Compras();
+            CCompras form = new CCompras();
             form.Show();
             form.TopMost = true;
             form.Activate();

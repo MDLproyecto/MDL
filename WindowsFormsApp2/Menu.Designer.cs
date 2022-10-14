@@ -563,7 +563,7 @@
             // 
             this.usuariosBindingSource.DataMember = "Usuarios";
             // 
-            // Formulario
+            // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -576,7 +576,7 @@
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.panel4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Formulario";
+            this.Name = "Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cooperativa";
             this.Load += new System.EventHandler(this.Form2_Load);

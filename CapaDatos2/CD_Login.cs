@@ -8,27 +8,35 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+using MySql.Data.MySqlClient;
+
 namespace CapaDatos2
+
 {
     public class CD_Login
     {
-        SqlConnection con2 = new SqlConnection("Data Source=localhost\\SQLEXPRESS;Initial Catalog=Ke_Fruta; Integrated Security=True");
+
+        
+
 
         public int conSQL(string usuario, string contrasena)
         {
-                int conn;    
-                con2.Open();
-                SqlCommand cmd = new SqlCommand("SELECT Nombres,Tipo_usuario,CI,Email,Telefono FROM usuarios WHERE Usuario = @usuario AND Password = @pas ", con2);
+            MySqlConnection con2 = new MySqlConnection(CM_Login.cone);
+            con2.Open();
+            int conn;    
+                
+                MySqlCommand cmd = new MySqlCommand("SELECT Nombres,Tipo_usuario,CI,Email,Telefono FROM usuarios WHERE Usuario = @usuario AND Password = @pas ", con2);
 
                 cmd.Parameters.AddWithValue("usuario", usuario);
                 cmd.Parameters.AddWithValue("pas", contrasena);
 
 
 
-                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                MySqlDataAdapter sda = new MySqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
-                SqlDataReader dr = cmd.ExecuteReader();
+                 MySqlDataReader dr = cmd.ExecuteReader();
 
                 if (dr.Read())
                 {
@@ -44,8 +52,10 @@ namespace CapaDatos2
             }else{
                 conn = 0;
             }
+
             con2.Close();
             return conn;
+
             }
           }
     }

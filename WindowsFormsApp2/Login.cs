@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;//DLLs para mover el login
 using System.Data.SqlClient; //SQL
+using MySql.Data.MySqlClient;
 
 namespace WindowsFormsApp2
 {
@@ -35,7 +36,7 @@ namespace WindowsFormsApp2
             
         }
 
-        SqlConnection con = new SqlConnection("Data Source=localhost\\SQLEXPRESS;Initial Catalog=Ke_Fruta; Integrated Security=True");
+        MySqlConnection con = new MySqlConnection(CM_Login.cone);
 
 
         
@@ -46,15 +47,15 @@ namespace WindowsFormsApp2
                 {
 
                     con.Open();
-                    SqlCommand cmd = new SqlCommand("SELECT Nombres,Tipo_usuario,CI,Email,Telefono FROM usuarios WHERE Usuario = @usuario AND Password = @pas ", con);
+                MySqlCommand cmd = new MySqlCommand("SELECT Nombres,Tipo_usuario,CI,Email,Telefono FROM usuarios WHERE Usuario = @usuario AND Password = @pas ", con);
 
                     cmd.Parameters.AddWithValue("usuario", usuario);
                     cmd.Parameters.AddWithValue("pas", contrasena);
-                
-                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+
+                MySqlDataAdapter sda = new MySqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
-                SqlDataReader dr = cmd.ExecuteReader();
+                MySqlDataReader dr = cmd.ExecuteReader();
 
                 this.Hide();
                     if (dt.Rows[0][1].ToString() == "Admin")

@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Runtime.InteropServices;//DLLs para mover el form
+using MySql.Data.MySqlClient;
+using CapaModelo2;
 
 namespace WindowsFormsApp2
 {
@@ -31,7 +33,7 @@ namespace WindowsFormsApp2
         {
             // TODO: This line of code loads data into the 'ke_FrutaSemillas.Semillas' table. You can move, or remove it, as needed.
             this.semillasTableAdapter.Fill(this.ke_FrutaSemillas.Semillas);
-
+            this.rellenarDT();
 
 
         }
@@ -91,5 +93,27 @@ namespace WindowsFormsApp2
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+
+
+        private void rellenarDT()
+        {
+            MySqlConnection con3 = new MySqlConnection(CM_Login.cone);
+            {
+                using (MySqlCommand cmd = new MySqlCommand("SELECT * FROM Insumos", con3))
+                {
+                    cmd.CommandType = CommandType.Text;
+                    using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                    {
+                        using (DataTable dt = new DataTable())
+                        {
+                            sda.Fill(dt);
+                            dgvP.DataSource = dt;
+                        }
+                    }
+                }
+            }
+        }
+
+
     }
 }
