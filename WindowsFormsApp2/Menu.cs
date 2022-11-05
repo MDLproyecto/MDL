@@ -310,5 +310,18 @@ namespace WindowsFormsApp2
         {
 
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Historial form = new Historial();
+            form.Show();
+            form.TopMost = true;
+            form.Activate();
+        }
+
+        private void adminContainer_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

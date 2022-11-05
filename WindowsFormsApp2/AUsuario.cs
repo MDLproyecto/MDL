@@ -16,6 +16,7 @@ namespace WindowsFormsApp2
 {
     public partial class AUsuario : Form
     {
+        MySqlConnection con = new MySqlConnection(CM_Login.cone);
         //Esto es para que se pueda mover
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -27,13 +28,11 @@ namespace WindowsFormsApp2
             InitializeComponent();
         }
 
-        SqlConnection con = new SqlConnection("Data Source=DESKTOP-OB3T54G\\SQLEXPRESS;Initial Catalog=Ke_Fruta; Integrated Security=True");
-
+       
         private void Precios_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'ke_FrutaUsuarios.Usuarios' table. You can move, or remove it, as needed.
-            this.usuariosTableAdapter.Fill(this.ke_FrutaUsuarios.Usuarios);
             this.rellenarDT();
+            actualizar.Start();
 
 
         }
@@ -111,6 +110,12 @@ namespace WindowsFormsApp2
                     }
                 }
             }
+        }
+
+        private void actualizar_Tick(object sender, EventArgs e)
+        {
+            this.rellenarDT();
+           
         }
 
     }

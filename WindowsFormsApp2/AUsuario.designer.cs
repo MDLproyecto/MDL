@@ -35,6 +35,7 @@
             this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.usuariosTableAdapter = new WindowsFormsApp2.Ke_FrutaUsuariosTableAdapters.UsuariosTableAdapter();
+            this.actualizar = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvU)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ke_FrutaUsuarios)).BeginInit();
@@ -121,5 +122,6 @@
         private Ke_FrutaUsuarios ke_FrutaUsuarios;
         private System.Windows.Forms.BindingSource usuariosBindingSource1;
         private Ke_FrutaUsuariosTableAdapters.UsuariosTableAdapter usuariosTableAdapter;
+        private System.Windows.Forms.Timer actualizar;
     }
 }

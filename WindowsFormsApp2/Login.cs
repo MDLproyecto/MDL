@@ -47,7 +47,7 @@ namespace WindowsFormsApp2
                 {
 
                     con.Open();
-                MySqlCommand cmd = new MySqlCommand("SELECT Nombres,Tipo_usuario,CI,Email,Telefono FROM usuarios WHERE Usuario = @usuario AND Password = @pas ", con);
+                MySqlCommand cmd = new MySqlCommand("SELECT Nombres,Tipo_usuario,CI,Email,Telefono FROM Usuarios WHERE Usuario = @usuario AND Password = @pas ", con);
 
                     cmd.Parameters.AddWithValue("usuario", usuario);
                     cmd.Parameters.AddWithValue("pas", contrasena);
@@ -68,9 +68,10 @@ namespace WindowsFormsApp2
                         // muestra el formulario 2
                         f2.ShowDialog();
                         f2 = null;
-                        // cuando se cierra el formulario 2 se abre el 1
-                        this.Show();
-                        CM_Login.corre = true;
+                    // cuando se cierra el formulario 2 se abre el 1
+                    this.Show();
+                    con.Close();
+                    CM_Login.corre = true;
                     }
                     else if (dt.Rows[0][1].ToString() == "Productor")
                     {
@@ -84,7 +85,8 @@ namespace WindowsFormsApp2
                         f2 = null;
                         // cuando se cierra el formulario 2 se abre el 1
                         this.Show();
-                        CM_Login.corre = true;
+                    con.Close();
+                    CM_Login.corre = true;
                     }
 
                     else if (dt.Rows[0][1].ToString() == "Cliente")
@@ -99,7 +101,8 @@ namespace WindowsFormsApp2
                         f2 = null;
                         // cuando se cierra el formulario 2 se abre el 1
                         this.Show();
-                        CM_Login.corre = true;
+                    con.Close();
+                    CM_Login.corre = true;
                     }
 
                 }

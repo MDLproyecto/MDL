@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient; //SQL
-using MySql.Data.MySqlClient;
+using MySql.Data.MySqlClient; //MYSQL
 
 namespace CapaModelo2
 {
@@ -19,7 +19,7 @@ namespace CapaModelo2
         public static string email;
         public static string tele;
         public static string databa = "lcastro";
-        public static string cone = "server=localhost;uid=lcastro;" +"pwd=54269024;database=lcastro;";
+        public static string cone = "server=localhost;uid=lcastro;pwd=54269024;database=lcastro;";
 
         public static string Cserver = "localhost";
         public static string Cdatabase = "lcastro";

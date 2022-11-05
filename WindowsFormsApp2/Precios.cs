@@ -16,6 +16,7 @@ namespace WindowsFormsApp2
 {
     public partial class Precios : Form
     {
+        MySqlConnection con = new MySqlConnection(CM_Login.cone);
         //Esto es para que se pueda mover
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -27,12 +28,10 @@ namespace WindowsFormsApp2
             InitializeComponent();
         }
 
-        SqlConnection con = new SqlConnection("Data Source=DESKTOP-OB3T54G\\SQLEXPRESS;Initial Catalog=Ke_Fruta; Integrated Security=True");
+       
 
         private void Precios_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'ke_FrutaSemillas.Semillas' table. You can move, or remove it, as needed.
-            this.semillasTableAdapter.Fill(this.ke_FrutaSemillas.Semillas);
             this.rellenarDT();
 
 

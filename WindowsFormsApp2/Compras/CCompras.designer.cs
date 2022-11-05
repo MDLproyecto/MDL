@@ -58,6 +58,8 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.comprasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.actualizar = new System.Windows.Forms.Timer(this.components);
+            this.admin = new System.Windows.Forms.Timer(this.components);
+            this.otro = new System.Windows.Forms.Timer(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvC)).BeginInit();
@@ -99,7 +101,7 @@
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.groupBox1.Location = new System.Drawing.Point(12, 65);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(983, 150);
+            this.groupBox1.Size = new System.Drawing.Size(1176, 150);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Area de Ventas";
@@ -208,7 +210,7 @@
             this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label5.Font = new System.Drawing.Font("Sitka Text", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label5.Location = new System.Drawing.Point(776, 15);
+            this.label5.Location = new System.Drawing.Point(960, 11);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(187, 28);
             this.label5.TabIndex = 24;
@@ -222,7 +224,7 @@
             this.lblDate.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.lblDate.Location = new System.Drawing.Point(772, 102);
+            this.lblDate.Location = new System.Drawing.Point(956, 98);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(191, 40);
             this.lblDate.TabIndex = 23;
@@ -235,7 +237,7 @@
             this.lblClock.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblClock.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblClock.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(128)))), ((int)(((byte)(38)))));
-            this.lblClock.Location = new System.Drawing.Point(755, 45);
+            this.lblClock.Location = new System.Drawing.Point(939, 41);
             this.lblClock.Name = "lblClock";
             this.lblClock.Size = new System.Drawing.Size(222, 57);
             this.lblClock.TabIndex = 22;
@@ -308,7 +310,7 @@
             this.dgvC.Location = new System.Drawing.Point(12, 230);
             this.dgvC.Name = "dgvC";
             this.dgvC.ReadOnly = true;
-            this.dgvC.Size = new System.Drawing.Size(983, 164);
+            this.dgvC.Size = new System.Drawing.Size(1176, 164);
             this.dgvC.TabIndex = 2;
             // 
             // comprasBindingSource1
@@ -327,9 +329,9 @@
             this.btnCo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCo.Font = new System.Drawing.Font("Noto Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnCo.Location = new System.Drawing.Point(811, 400);
+            this.btnCo.Location = new System.Drawing.Point(1025, 400);
             this.btnCo.Name = "btnCo";
-            this.btnCo.Size = new System.Drawing.Size(184, 34);
+            this.btnCo.Size = new System.Drawing.Size(163, 34);
             this.btnCo.TabIndex = 5;
             this.btnCo.Text = "Comprar";
             this.btnCo.UseVisualStyleBackColor = false;
@@ -362,7 +364,7 @@
             this.pictureBox6.BackColor = System.Drawing.Color.Gray;
             this.pictureBox6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox6.Image = global::WindowsFormsApp2.Properties.Resources.minimizar_signo;
-            this.pictureBox6.Location = new System.Drawing.Point(933, 9);
+            this.pictureBox6.Location = new System.Drawing.Point(1126, 9);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(28, 28);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -375,7 +377,7 @@
             this.pictureBox2.BackColor = System.Drawing.Color.Gray;
             this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox2.Image = global::WindowsFormsApp2.Properties.Resources.cerrar;
-            this.pictureBox2.Location = new System.Drawing.Point(967, 9);
+            this.pictureBox2.Location = new System.Drawing.Point(1160, 9);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(28, 28);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -392,12 +394,20 @@
             this.actualizar.Interval = 1;
             this.actualizar.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // admin
+            // 
+            this.admin.Tick += new System.EventHandler(this.admin_Tick);
+            // 
+            // otro
+            // 
+            this.otro.Tick += new System.EventHandler(this.otro_Tick_1);
+            // 
             // CCompras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.ClientSize = new System.Drawing.Size(1005, 446);
+            this.ClientSize = new System.Drawing.Size(1202, 446);
             this.Controls.Add(this.btnEli);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox2);
@@ -411,6 +421,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Compras_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.CCompras_MouseDown);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -465,5 +476,7 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.RadioButton rbK;
         private System.Windows.Forms.RadioButton rbU;
+        private System.Windows.Forms.Timer admin;
+        private System.Windows.Forms.Timer otro;
     }
 }

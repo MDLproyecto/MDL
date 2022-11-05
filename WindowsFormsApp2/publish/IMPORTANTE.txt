@@ -1,0 +1,14 @@
+Los usuarios ya agregados son
+ADMIN
+user:Juan01
+pass:123
+PRODUCTOR
+user:Matias02
+pass:123
+CLIENTE
+user:Carla03
+pass:123
+/////////
+Estos son usuarios de prueba y no personas reales.
+/////////
+Se adjunta tambien el querry por facilidad de acceso aunque no se espera el uso de los usuarios

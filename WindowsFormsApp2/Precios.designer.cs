@@ -49,7 +49,7 @@
             this.dgvP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvP.Location = new System.Drawing.Point(12, 29);
             this.dgvP.Name = "dgvP";
-            this.dgvP.Size = new System.Drawing.Size(343, 293);
+            this.dgvP.Size = new System.Drawing.Size(666, 293);
             this.dgvP.TabIndex = 0;
             this.dgvP.CellMouseUp += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseUp);
             this.dgvP.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseDown);
@@ -69,7 +69,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::WindowsFormsApp2.Properties.Resources.cerrar;
-            this.pictureBox1.Location = new System.Drawing.Point(338, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(658, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(20, 21);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -86,7 +86,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.ClientSize = new System.Drawing.Size(368, 335);
+            this.ClientSize = new System.Drawing.Size(691, 335);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dgvP);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

@@ -33,6 +33,8 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.btnAdmin = new System.Windows.Forms.Button();
             this.adminContainer = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.btnHisto = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnPrecios = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -71,6 +73,7 @@
             this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.adminContainer.SuspendLayout();
+            this.panel8.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -140,11 +143,40 @@
             this.adminContainer.Controls.Add(this.panel2);
             this.adminContainer.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.adminContainer.Location = new System.Drawing.Point(3, 109);
-            this.adminContainer.MaximumSize = new System.Drawing.Size(200, 160);
+            this.adminContainer.MaximumSize = new System.Drawing.Size(200, 162);
             this.adminContainer.MinimumSize = new System.Drawing.Size(200, 40);
             this.adminContainer.Name = "adminContainer";
             this.adminContainer.Size = new System.Drawing.Size(200, 40);
             this.adminContainer.TabIndex = 4;
+            this.adminContainer.Paint += new System.Windows.Forms.PaintEventHandler(this.adminContainer_Paint);
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.Gray;
+            this.panel8.Controls.Add(this.btnHisto);
+            this.panel8.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.panel8.Location = new System.Drawing.Point(0, 158);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(200, 53);
+            this.panel8.TabIndex = 20;
+            // 
+            // btnHisto
+            // 
+            this.btnHisto.BackColor = System.Drawing.Color.Gray;
+            this.btnHisto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHisto.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHisto.Image = global::WindowsFormsApp2.Properties.Resources.submenu;
+            this.btnHisto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHisto.Location = new System.Drawing.Point(-31, 0);
+            this.btnHisto.Name = "btnHisto";
+            this.btnHisto.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnHisto.Size = new System.Drawing.Size(231, 55);
+            this.btnHisto.TabIndex = 4;
+            this.btnHisto.Text = "Historial de compras";
+            this.btnHisto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHisto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnHisto.UseVisualStyleBackColor = false;
+            this.btnHisto.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // panel5
             // 
@@ -281,12 +313,13 @@
             // accionesContainer
             // 
             this.accionesContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.accionesContainer.Controls.Add(this.panel8);
             this.accionesContainer.Controls.Add(this.panelSem);
             this.accionesContainer.Controls.Add(this.panel6);
             this.accionesContainer.Controls.Add(this.panel7);
             this.accionesContainer.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.accionesContainer.Location = new System.Drawing.Point(3, 155);
-            this.accionesContainer.MaximumSize = new System.Drawing.Size(200, 165);
+            this.accionesContainer.MaximumSize = new System.Drawing.Size(200, 210);
             this.accionesContainer.MinimumSize = new System.Drawing.Size(200, 44);
             this.accionesContainer.Name = "accionesContainer";
             this.accionesContainer.Size = new System.Drawing.Size(200, 44);
@@ -297,7 +330,7 @@
             this.panelSem.BackColor = System.Drawing.Color.Gray;
             this.panelSem.Controls.Add(this.btnSie);
             this.panelSem.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.panelSem.Location = new System.Drawing.Point(3, 104);
+            this.panelSem.Location = new System.Drawing.Point(3, 103);
             this.panelSem.Name = "panelSem";
             this.panelSem.Size = new System.Drawing.Size(200, 53);
             this.panelSem.TabIndex = 19;
@@ -583,6 +616,7 @@
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Formulario_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.adminContainer.ResumeLayout(false);
+            this.panel8.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -650,5 +684,7 @@
         private System.Windows.Forms.Label lblEm2;
         private System.Windows.Forms.Label lblNom2;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Button btnHisto;
     }
 }

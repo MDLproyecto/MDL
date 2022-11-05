@@ -26,7 +26,7 @@ namespace CapaDatos2
             con2.Open();
             int conn;    
                 
-                MySqlCommand cmd = new MySqlCommand("SELECT Nombres,Tipo_usuario,CI,Email,Telefono FROM usuarios WHERE Usuario = @usuario AND Password = @pas ", con2);
+                MySqlCommand cmd = new MySqlCommand("SELECT Nombres,Tipo_usuario,CI,Email,Telefono FROM Usuarios WHERE Usuario = @usuario AND Password = @pas ", con2);
 
                 cmd.Parameters.AddWithValue("usuario", usuario);
                 cmd.Parameters.AddWithValue("pas", contrasena);
