@@ -1,13 +1,13 @@
 Los usuarios ya agregados son
 ADMIN
-user:Juan01
+user:Cruz22
 pass:123
 PRODUCTOR
 user:Matias02
 pass:123
 CLIENTE
 user:Carla03
-pass:123
+pass:AzulAzulVerde34
 /////////
 Estos son usuarios de prueba y no personas reales.
 /////////

@@ -1074,7 +1074,7 @@
             // 
             // fin
             // 
-            this.fin.Interval = 5000;
+            this.fin.Interval = 120000;
             this.fin.Tick += new System.EventHandler(this.fin_Tick);
             // 
             // Siembra

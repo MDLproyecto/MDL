@@ -71,9 +71,9 @@ CREATE TABLE if not exists inv
 );
 
 insert into Usuarios(CI,Nombres,Usuario ,Password,Telefono,Email,Tipo_usuario) 
-values ('54287596', 'Juan Carlos', 'Juan01', '123','094225538','juan@gmail.com','Admin'),
-('43164362', 'Matias Rodriguez', 'Matias02', '123','094225538','matias@gmail.com','Productor'),
-('76237232', 'Carla Magna', 'Carla03', '123','094225538','Carla@gmail.com','Cliente');
+values ('54287596', 'Juan Carlos', 'Juan01', 'Cruz22','094225538','juan@gmail.com','Admin'),
+('43164362', 'Matias Rodriguez', 'Matias02', 'ReyDeCopas111','094225538','matias@gmail.com','Productor'),
+('76237232', 'Carla Magna', 'Carla03', 'AzulAzulVerde34','094225538','Carla@gmail.com','Cliente');
 
 					
 insert into Insumos(Insumo,Precio_X_Unidad,Precio_X_Kilo,IoS) 
